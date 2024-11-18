@@ -1,0 +1,106 @@
+
+  
+  <p>Edad = {{edad}} {{esMayorDeEdad()}}<br>
+    Salario mensual = {{salario}} <br>
+    Salario anual = {{salario *12 }} <br>
+  <hr>
+
+  <p (click)="incrementar()">
+    Edad = {{edad}} <span *ngIf=" edad < 18 ">Es mayor de edad </span><br>
+    <ul>
+      <li *ngFor ="let sueldo of sueldos"> {{sueldo * contador}}</li>
+    </ul>
+
+    <hr>
+
+    <p>{{contador}}
+      <button (click)="incrementar()">Incrementar</button>
+    </p>
+
+  <hr>
+
+  <form action="">
+    <input type="text" name="txtName" [(ngModel)]="name">
+  </form>
+
+  A= <input type="number" name="txtA" [(ngModel)]="a"> <br>
+  B= <input type="number" name="txtB" [(ngModel)]="b"> <br>
+  C= <input type="number" name="txtC" [(ngModel)]="c"> <br>
+  <button (click)="sumar()">Sumar</button>
+
+  <hr>
+
+  <table border="1">
+    <tr>
+      <th>Codigo</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let articulo of articulos">
+      <td>{{articulo.codigo}}</td>
+      <td>{{articulo.descripcion}}</td>
+      <td>{{articulo.precio}}</td>
+      <td>
+        <button (click)="eliminar(articulo.codigo)">Borrar</button>
+        <button (click)="seleccionar(articulo.codigo)">Seleccionar</button>
+      </td>
+    
+    </tr>
+    
+  </table>
+
+  <app-formulario
+[codigo]="codigo"
+[descripcion]="descripcion"
+[precio]="precio"
+(guardarArticulo)="guardarArticulo($event)">
+</app-formulario>
+
+  <!-- Codigo <input type="number" name="txtCodigo" [(ngModel)]="codigo"> <br>
+  Descripcion <input type="text" name="txtDescripcion" [(ngModel)]="descripcion"> <br>
+  Precio <input type="number" name="txtPrecio" [(ngModel)]="precio"> <br> 
+  <button (click)="guardar()">Guardar</button> -->
+ 
+  
+  
+  <hr>
+  <app-dado #dado1 color="red"></app-dado>
+  <app-dado #dado2 color="black"></app-dado> 
+  <app-dado #dado3 color="blue"></app-dado> 
+  
+  <button (click)="dado1.lanzar()"> lanzar 1</button>
+  <button (click)="dado2.lanzar()"> lanzar 2</button>
+  <button (click)="dado3.lanzar()"> lanzar 3</button>
+  <button (click)="lanzar()"> Lanzar todos</button>
+  
+  <div *ngIf="mensaje">{{ mensaje }}</div>
+
+  <hr>
+  {{minuto}} min.
+  <app-cronometro (minutos) = "actualizar($event)"></app-cronometro>
+
+  <hr>
+
+  <table border="1">
+    <tr>
+      <th>Nombre</th>
+      <th>Raza</th>
+      <th>Foto</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let perro of perros">
+      <td>{{perro.nombre}}</td>
+      <td>{{perro.raza}}</td>
+      <td> <img src="{{perro.foto}}" width="50px"> </td>
+      <td>
+        <button (click)="eliminar(perro.nombre)">Borrar</button>
+        <button (click)="seleccionar(perro.nombre)">Seleccionar</button>
+        <img [src]="perro.foto" width="50px">
+      </td>
+    
+    </tr>
+    
+  </table>
+
+  

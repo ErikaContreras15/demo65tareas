@@ -1,0 +1,90 @@
+/* Estilo para el contenedor principal */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  /* Estilo para el encabezado del componente */
+  p {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para las etiquetas de entrada */
+  input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilo para los botones */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #2ce835;
+  }
+  
+  /* Estilo para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Estilo para los botones dentro de la tabla */
+  table button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  table button:first-of-type {
+    background-color: #f44336; /* Color rojo para el botón "Borrar" */
+  }
+  
+  table button:first-of-type:hover {
+    background-color: #d32f2f;
+  }
+  
+  table button:last-of-type {
+    background-color: #2196F3; /* Color azul para el botón "Seleccionar" */
+  }
+  
+  table button:last-of-type:hover {
+    background-color: #1976D2;
+  }
+  

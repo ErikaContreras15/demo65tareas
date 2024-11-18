@@ -1,0 +1,20 @@
+<p>Lista Perros</p>
+Nombre <input type="text" name="txtDescripcion" [(ngModel)]="perro.nombre"> <br>
+Raza <input type="text" name="txtPrecio" [(ngModel)]="perro.raza"> <br> 
+<button (click)="guardar()">Guardar</button>
+
+<table border="1">
+  <tr>
+    <th>Nombre</th>
+    <th>Raza</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let perro of perros">
+    <td>{{perro.nombre}}</td>
+    <td>{{perro.raza}}</td>
+    <td>
+      <button (click)="borrar(perro.id)">Borrar</button>
+      <button (click)="seleccionar(perro)">Seleccionar</button>
+    </td>
+  </tr>
+</table>
